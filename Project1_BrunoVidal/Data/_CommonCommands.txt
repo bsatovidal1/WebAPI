@@ -1,0 +1,7 @@
+﻿Add-Migration -Context ArtContext -o Data\AWMigrations Initial
+Update-Database -Context ArtContext
+
+Put at end of Up() 
+
+Add To Migration:
+ExtraMigration.Steps(migrationBuilder);

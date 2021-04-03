@@ -1,0 +1,79 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="ArtworksClient_BrunoVidal.ArtworkDetailPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ArtworksClient_BrunoVidal"
+    xmlns:data="using:ArtworksClient_BrunoVidal.Models"
+    xmlns:converters="using:ArtworksClient_BrunoVidal.Converters"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <converters:DateTimeToOffsetConverter x:Key="DateTimeToOffsetConverter"/>
+    </Page.Resources>
+
+    <ScrollViewer>
+        <StackPanel>
+            <!--TitlePanel contains the name of the application and page title-->
+            <TextBlock FontFamily="Arial" FontSize="20" HorizontalAlignment="Center" Margin="0,15,0,5">Bruno Vidal - Artwork Project</TextBlock>
+            <TextBlock FontFamily="Arial" FontSize="20" HorizontalAlignment="Center" Margin="0,5,0,5">Details</TextBlock>
+            <TextBlock x:ConnectionId='2' FontFamily="Arial" FontSize="20" HorizontalAlignment="Center" x:Name="txtTitle"                           Margin="0,5,0,5" />
+
+            <!--ContentPanel - place additional content here-->
+            <Grid x:ConnectionId='3' x:Name="ContentPanel" Grid.Row="1" Margin="10,0,10,0">
+                <Grid x:ConnectionId='4' Name="patientDisplayGrid">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock x:ConnectionId='5' Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="5,0,0,0"
+                           VerticalAlignment="Center" Name="NameTextBlock" Text="Artwork Name" />
+                    <TextBox x:ConnectionId='6' Grid.Row="0" Grid.Column="1" Height="30" Name="nameTextBox" 
+                         MaxLength="30" InputScope="Text"                                       AcceptsReturn="False" />
+
+                    <CalendarDatePicker x:ConnectionId='7' Header="Completed" Grid.Column="1" Grid.Row="1"                                                                                                   
+                                    HorizontalAlignment="Left" VerticalAlignment="Top"  />
+
+                    <TextBlock x:ConnectionId='8' Grid.Row="2" Grid.Column="0"  HorizontalAlignment="Left"  Margin="5,0,0,0"
+                           VerticalAlignment="Center" Name="DescriptionTextBlock" Text="Description" />
+                    <TextBox x:ConnectionId='9' Grid.Row="2" Grid.Column="1" Height="30" Name="mnameTextBox" 
+                         MaxLength="511"                                                AcceptsReturn="True" InputScope="Text" />
+
+                    <TextBlock x:ConnectionId='10' Grid.Row="3" Grid.Column="0"  HorizontalAlignment="Left"  Margin="5,0,0,0"
+                           VerticalAlignment="Center" Name="ValueTextBlock" Text="Value" />
+                    <TextBox x:ConnectionId='11' Grid.Row="3" Grid.Column="1" Height="30" Name="valueTextBox" 
+                         MaxLength="50"                                          AcceptsReturn="True" InputScope="Text" />
+
+                    <TextBlock x:ConnectionId='12' Grid.Row="4" Grid.Column="0"  HorizontalAlignment="Left"  Margin="5,0,6,0"
+                           VerticalAlignment="Center"  Name="artTypeTextBlock" Text="Doctor" />
+
+                    <ComboBox x:ConnectionId='13' x:Name="ArtTypeCombo" Grid.Column="1" Grid.Row="4" 
+                          HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                          SelectedValuePath="ID"  DisplayMemberPath="Type" 
+                          SelectedValue="{Binding ArtTypeID, Mode=TwoWay}"   />
+
+                    <RelativePanel Grid.Row="5" Grid.ColumnSpan="2">
+                        <Button x:ConnectionId='14' x:Name="btnDelete" Content="Delete" RelativePanel.LeftOf="btnSave"
+                                                Margin="6,6,0,6" />
+                        <Button x:ConnectionId='15' x:Name="btnSave" Content="Save" RelativePanel.AlignHorizontalCenterWithPanel="True"
+                                              Margin="6,6,6,6" />
+                        <Button x:ConnectionId='16' x:Name="btnCancel" Content="Cancel" RelativePanel.RightOf="btnSave"
+                                                Margin="0,6,6,6" />
+                    </RelativePanel>
+                </Grid>
+            </Grid>
+        </StackPanel>
+    </ScrollViewer>
+</Page>
+

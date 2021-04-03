@@ -1,0 +1,17 @@
+C:\Users\Bruno\Desktop\Project1_ClientConsole_BrunoVidal\bin\Debug\netcoreapp3.1\Project1_ClientConsole_BrunoVidal.exe
+C:\Users\Bruno\Desktop\Project1_ClientConsole_BrunoVidal\obj\Debug\netcoreapp3.1\Project1_ClientConsole_BrunoVidal.csprojAssemblyReference.cache
+C:\Users\Bruno\Desktop\Project1_ClientConsole_BrunoVidal\obj\Debug\netcoreapp3.1\Project1_ClientConsole_BrunoVidal.AssemblyInfoInputs.cache
+C:\Users\Bruno\Desktop\Project1_ClientConsole_BrunoVidal\obj\Debug\netcoreapp3.1\Project1_ClientConsole_BrunoVidal.AssemblyInfo.cs
+C:\Users\Bruno\Desktop\Project1_ClientConsole_BrunoVidal\bin\Debug\netcoreapp3.1\Project1_ClientConsole_BrunoVidal.deps.json
+C:\Users\Bruno\Desktop\Project1_ClientConsole_BrunoVidal\bin\Debug\netcoreapp3.1\Project1_ClientConsole_BrunoVidal.runtimeconfig.json
+C:\Users\Bruno\Desktop\Project1_ClientConsole_BrunoVidal\bin\Debug\netcoreapp3.1\Project1_ClientConsole_BrunoVidal.runtimeconfig.dev.json
+C:\Users\Bruno\Desktop\Project1_ClientConsole_BrunoVidal\bin\Debug\netcoreapp3.1\Project1_ClientConsole_BrunoVidal.dll
+C:\Users\Bruno\Desktop\Project1_ClientConsole_BrunoVidal\bin\Debug\netcoreapp3.1\Project1_ClientConsole_BrunoVidal.pdb
+C:\Users\Bruno\Desktop\Project1_ClientConsole_BrunoVidal\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+C:\Users\Bruno\Desktop\Project1_ClientConsole_BrunoVidal\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Bruno\Desktop\Project1_ClientConsole_BrunoVidal\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\Bruno\Desktop\Project1_ClientConsole_BrunoVidal\obj\Debug\netcoreapp3.1\Project1_ClientConsole_BrunoVidal.csproj.CoreCompileInputs.cache
+C:\Users\Bruno\Desktop\Project1_ClientConsole_BrunoVidal\obj\Debug\netcoreapp3.1\Project1_ClientConsole_BrunoVidal.csproj.CopyComplete
+C:\Users\Bruno\Desktop\Project1_ClientConsole_BrunoVidal\obj\Debug\netcoreapp3.1\Project1_ClientConsole_BrunoVidal.dll
+C:\Users\Bruno\Desktop\Project1_ClientConsole_BrunoVidal\obj\Debug\netcoreapp3.1\Project1_ClientConsole_BrunoVidal.pdb
+C:\Users\Bruno\Desktop\Project1_ClientConsole_BrunoVidal\obj\Debug\netcoreapp3.1\Project1_ClientConsole_BrunoVidal.genruntimeconfig.cache

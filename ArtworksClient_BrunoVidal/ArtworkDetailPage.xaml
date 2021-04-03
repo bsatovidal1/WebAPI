@@ -1,0 +1,78 @@
+﻿<Page
+    x:Class="ArtworksClient_BrunoVidal.ArtworkDetailPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ArtworksClient_BrunoVidal"
+    xmlns:data="using:ArtworksClient_BrunoVidal.Models"
+    xmlns:converters="using:ArtworksClient_BrunoVidal.Converters"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <converters:DateTimeToOffsetConverter x:Key="DateTimeToOffsetConverter"/>
+    </Page.Resources>
+
+    <ScrollViewer>
+        <StackPanel>
+            <!--TitlePanel contains the name of the application and page title-->
+            <TextBlock FontFamily="Arial" FontSize="20" HorizontalAlignment="Center" Margin="0,15,0,5">Bruno Vidal - Artwork Project</TextBlock>
+            <TextBlock FontFamily="Arial" FontSize="20" HorizontalAlignment="Center" Margin="0,5,0,5">Details</TextBlock>
+            <TextBlock FontFamily="Arial" FontSize="20" HorizontalAlignment="Center" x:Name="txtTitle" Text="{x:Bind view.Name}" Margin="0,5,0,5" />
+
+            <!--ContentPanel - place additional content here-->
+            <Grid x:Name="ContentPanel" Grid.Row="1" Margin="10,0,10,0">
+                <Grid Name="patientDisplayGrid">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="5,0,0,0"
+                           VerticalAlignment="Center" Name="NameTextBlock" Text="Artwork Name" />
+                    <TextBox Grid.Row="0" Grid.Column="1" Height="30" Name="nameTextBox" 
+                         MaxLength="30" InputScope="Text" Text="{x:Bind view.Name,Mode=TwoWay}" AcceptsReturn="False" />
+
+                    <CalendarDatePicker Header="Completed" Grid.Column="1" Grid.Row="1"  Date="{x:Bind view.Completed, Converter={StaticResource DateTimeToOffsetConverter}, Mode=TwoWay}"
+                                    HorizontalAlignment="Left" VerticalAlignment="Top"  />
+
+                    <TextBlock Grid.Row="2" Grid.Column="0"  HorizontalAlignment="Left"  Margin="5,0,0,0"
+                           VerticalAlignment="Center" Name="DescriptionTextBlock" Text="Description" />
+                    <TextBox Grid.Row="2" Grid.Column="1" Height="30" Name="mnameTextBox" 
+                         MaxLength="511"  Text="{x:Bind view.Description, Mode=TwoWay}" AcceptsReturn="True" InputScope="Text" />
+
+                    <TextBlock Grid.Row="3" Grid.Column="0"  HorizontalAlignment="Left"  Margin="5,0,0,0"
+                           VerticalAlignment="Center" Name="ValueTextBlock" Text="Value" />
+                    <TextBox Grid.Row="3" Grid.Column="1" Height="30" Name="valueTextBox" 
+                         MaxLength="50"  Text="{x:Bind view.Value, Mode=TwoWay}" AcceptsReturn="True" InputScope="Text" />
+
+                    <TextBlock Grid.Row="4" Grid.Column="0"  HorizontalAlignment="Left"  Margin="5,0,6,0"
+                           VerticalAlignment="Center"  Name="artTypeTextBlock" Text="Type" />
+
+                    <ComboBox x:Name="ArtTypeCombo" Grid.Column="1" Grid.Row="4" 
+                          HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                          SelectedValuePath="ID"  DisplayMemberPath="Type" 
+                          SelectedValue="{Binding ArtTypeID, Mode=TwoWay}"   />
+
+                    <RelativePanel Grid.Row="5" Grid.ColumnSpan="2">
+                        <Button x:Name="btnDelete" Content="Delete" RelativePanel.LeftOf="btnSave"
+                        Click="btnDelete_Click" Margin="6,6,0,6" />
+                        <Button x:Name="btnSave" Content="Save" RelativePanel.AlignHorizontalCenterWithPanel="True"
+                        Click="btnSave_Click" Margin="6,6,6,6" />
+                        <Button x:Name="btnCancel" Content="Cancel" RelativePanel.RightOf="btnSave"
+                        Click="btnCancel_Click" Margin="0,6,6,6" />
+                    </RelativePanel>
+                </Grid>
+            </Grid>
+        </StackPanel>
+    </ScrollViewer>
+</Page>
